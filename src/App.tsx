@@ -9,10 +9,6 @@ import ClientsPage from './pages/ClientsPage';
 import ChartsPage from './pages/ChartsPage';
 import UsersPage from './pages/UsersPage';
 import CompaniesPage from './pages/CompaniesPage';
-import CategoriesPage from './pages/CategoriesPage';
-import IndicatorsPage from './pages/IndicatorsPage';
-import DreConfigPage from './pages/DreConfigPage';
-import EntriesPage from './pages/EntriesPage';
 
 function App() {
   return (
@@ -27,14 +23,10 @@ function App() {
           <Route path="/graficos" element={<ChartsPage />} />
           <Route path="/usuarios" element={<UsersPage />} />
           <Route path="/empresas" element={<CompaniesPage />} />
-          <Route path="/categorias" element={<CategoriesPage />} />
-          <Route path="/indicadores" element={<IndicatorsPage />} />
-          <Route path="/config-dre" element={<DreConfigPage />} />
-          <Route path="/lancamentos" element={<EntriesPage />} />
         </Routes>
       </Layout>
     </Router>
   );
 }
 
-export default App
+export default App;

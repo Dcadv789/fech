@@ -18,8 +18,8 @@ const TopBar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-dark-900 m-4 ml-0 rounded-2xl shadow-lg border border-dark-900">
-      <div className="px-6 sm:px-8">
+    <header className="sticky top-0 z-10 bg-dark-900 my-4 rounded-2xl shadow-lg border border-dark-900">
+      <div className="px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <button className="p-2 rounded-lg text-dark-400 md:hidden hover:bg-dark-800 hover:text-white">
@@ -33,10 +33,17 @@ const TopBar: React.FC = () => {
             </button>
             <div className="relative">
               <button
-                className="p-2 rounded-lg text-dark-400 hover:bg-dark-800 hover:text-white"
+                className="flex items-center space-x-3 px-4 py-2.5 min-w-[200px] rounded-lg text-dark-400 hover:bg-dark-800 hover:text-white"
                 onClick={toggleSettingsMenu}
               >
                 <Settings size={20} />
+                <span className="text-sm">Configurações</span>
+                <ChevronDown
+                  size={16}
+                  className={`ml-auto transition-transform duration-200 ${
+                    isSettingsMenuOpen ? 'rotate-180' : ''
+                  }`}
+                />
               </button>
               {isSettingsMenuOpen && <SettingsMenu />}
             </div>
@@ -63,4 +70,4 @@ const TopBar: React.FC = () => {
   );
 };
 
-export default TopBar
+export default TopBar;

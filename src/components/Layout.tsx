@@ -14,12 +14,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Sidebar />
         </div>
         <div className="flex flex-col flex-1 pl-[280px]">
-          <TopBar />
-          <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 pl-0">
-            <div className="mx-auto">
-              {children}
-            </div>
-          </main>
+          <div className="px-6">
+            <TopBar />
+            <main className="flex-1 overflow-x-hidden overflow-y-auto">
+              <div className="mx-auto">
+                {children}
+              </div>
+            </main>
+          </div>
         </div>
       </div>
     </div>
