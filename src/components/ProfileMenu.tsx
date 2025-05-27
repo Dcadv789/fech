@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogOut, User, Settings } from 'lucide-react';
+import { LogOut, User } from 'lucide-react';
 
 const ProfileMenu: React.FC = () => {
   return (
@@ -14,10 +14,6 @@ const ProfileMenu: React.FC = () => {
           <User size={16} className="mr-2" />
           Perfil
         </button>
-        <button className="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-dark-700 hover:text-white flex items-center">
-          <Settings size={16} className="mr-2" />
-          Configurações
-        </button>
       </div>
       <div className="py-1 border-t border-dark-700">
         <button className="w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-dark-700 hover:text-red-300 flex items-center">
@@ -29,4 +25,4 @@ const ProfileMenu: React.FC = () => {
   );
 };
 
-export default ProfileMenu;
+export default ProfileMenu

@@ -27,8 +27,8 @@ const Sidebar: React.FC = () => {
                 className={({ isActive }) =>
                   `group flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
                     isActive
-                      ? 'bg-dark-800 text-primary-400'
-                      : 'text-dark-300 hover:bg-dark-800 hover:text-white'
+                      ? 'bg-primary-600 text-white'
+                      : 'text-dark-300 hover:bg-primary-600/10 hover:text-white'
                   }`
                 }
               >
@@ -43,4 +43,4 @@ const Sidebar: React.FC = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar
