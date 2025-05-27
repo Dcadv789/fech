@@ -8,13 +8,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex justify-center min-h-screen bg-black">
+    <div className="flex justify-center min-h-screen bg-dark-950">
       <div className="flex w-full max-w-[1920px]">
-        <Sidebar />
-        <div className="flex flex-col flex-1 overflow-hidden">
+        <div className="fixed left-0 top-0 bottom-0 z-20 w-[280px] flex items-start justify-center">
+          <Sidebar />
+        </div>
+        <div className="flex flex-col flex-1 pl-[280px]">
           <TopBar />
-          <main className="flex-1 overflow-x-hidden overflow-y-auto p-6">
-            <div className="mx-auto max-w-8xl">
+          <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 pl-0">
+            <div className="mx-auto">
               {children}
             </div>
           </main>
